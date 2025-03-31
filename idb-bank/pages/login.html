@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Private Access - IDB Banking</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/apple-touch-icon.png">
+    <link rel="manifest" href="../assets/images/site.webmanifest">
+    <link rel="stylesheet" href="../assets/css/login.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="../assets/images/logo.png" alt="IDB Logo">
+            </a>
+        </div>
+    </nav>
+
+    <main>
+        <div class="login-container">
+            <div class="login-card">
+                <h1>Private Access</h1>
+                <form id="loginForm" action="dashboard.html" method="POST">
+                    <div class="input-group">
+                        <label for="username">Client ID</label>
+                        <input type="text" id="username" name="username" required autocomplete="off">
+                    </div>
+                    <div class="input-group">
+                        <label for="password">Access Code</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <button type="submit" class="login-btn">Authenticate</button>
+                </form>
+                <div class="security-info">
+                    <p>For security reasons, you will be automatically logged out after 30 minutes of inactivity.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="copyright">© 2025 IDB Private Banking</div>
+    </footer>
+
+    <script src="../assets/js/login.js"></script>
+</body>
+</html>

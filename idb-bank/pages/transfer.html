@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transfer - IDB Banking</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/apple-touch-icon.png">
+    <link rel="manifest" href="../assets/images/site.webmanifest">
+    <link rel="stylesheet" href="../assets/css/dashboard.css">
+    <link rel="stylesheet" href="../assets/css/transfer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar Navigation -->
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <img src="../assets/images/logo.png" alt="IDB Logo" class="logo">
+            </div>
+            
+            <div class="sidebar-menu">
+                <a href="dashboard.html" class="menu-item">
+                    <i class="fas fa-th-large"></i>
+                    <span>Overview</span>
+                </a>
+                <a href="portfolio.html" class="menu-item">
+                    <i class="fas fa-chart-pie"></i>
+                    <span>Portfolio</span>
+                </a>
+                <a href="transactions.html" class="menu-item">
+                    <i class="fas fa-exchange-alt"></i>
+                    <span>Transactions</span>
+                </a>
+                <a href="documents.html" class="menu-item">
+                    <i class="fas fa-file-alt"></i>
+                    <span>Documents</span>
+                </a>
+            </div>
+
+            <div class="sidebar-footer">
+                <a href="index.html" class="logout-btn">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Log Out</span>
+                </a>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="header">
+                <div class="header-content">
+                    <h1>Transfer Funds</h1>
+                </div>
+            </div>
+
+            <div class="transfer-container">
+                <div class="transfer-options">
+                    <button class="option-btn active" data-type="money">
+                        <i class="fas fa-money-bill-wave"></i>
+                        <span>Money Transfer</span>
+                    </button>
+                    <button class="option-btn" data-type="assets">
+                        <i class="fas fa-sync-alt"></i>
+                        <span>Asset Trading</span>
+                    </button>
+                    <button class="option-btn" data-type="bank">
+                        <i class="fas fa-university"></i>
+                        <span>Bank Transfer</span>
+                    </button>
+                </div>
+
+                <!-- Money Transfer Form -->
+                <div class="transfer-form-container active" id="money-transfer">
+                    <form class="transfer-form" id="moneyTransferForm">
+                        <div class="form-group">
+                            <label>From Account</label>
+                            <select required>
+                                <option value="investment">Investment Account - €4,246,000</option>
+                                <option value="savings">Savings Account - €65,000</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>To Account</label>
+                            <select required>
+                                <option value="">Select Destination Account</option>
+                                <option value="savings">Savings Account</option>
+                                <option value="external">External Account</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Amount (€)</label>
+                            <input type="number" required min="0" step="0.01" placeholder="Enter amount">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Transfer Date</label>
+                            <input type="date" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Description (Optional)</label>
+                            <textarea placeholder="Add a note"></textarea>
+                        </div>
+
+                        <button type="submit" class="submit-btn">Continue to Review</button>
+                    </form>
+                </div>
+
+                <!-- Asset Trading Form -->
+                <div class="transfer-form-container" id="asset-trading">
+                    <form class="transfer-form" id="assetTradingForm">
+                        <div class="form-group">
+                            <label>Asset Type</label>
+                            <select required>
+                                <option value="">Select Asset Type</option>
+                                <option value="stocks">Stocks</option>
+                                <option value="bonds">Bonds</option>
+                                <option value="realestate">Real Estate</option>
+                                <option value="alternative">Alternative Investments</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Trade Type</label>
+                            <select required>
+                                <option value="buy">Buy</option>
+                                <option value="sell">Sell</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Amount (€)</label>
+                            <input type="number" required min="0" step="0.01" placeholder="Enter amount">
+                        </div>
+
+                        <button type="submit" class="submit-btn">Continue to Review</button>
+                    </form>
+                </div>
+
+                <!-- Bank Transfer Form -->
+                <div class="transfer-form-container" id="bank-transfer">
+                    <form class="transfer-form" id="bankTransferForm">
+                        <div class="form-group">
+                            <label>Bank Name</label>
+                            <input type="text" required placeholder="Enter bank name">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Account Number (IBAN)</label>
+                            <input type="text" required placeholder="Enter IBAN">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Amount (€)</label>
+                            <input type="number" required min="0" step="0.01" placeholder="Enter amount">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Transfer Date</label>
+                            <input type="date" required>
+                        </div>
+
+                        <button type="submit" class="submit-btn">Continue to Review</button>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="../assets/js/dashboard.js"></script>
+    <script src="../assets/js/transfer.js"></script>
+</body>
+</html>

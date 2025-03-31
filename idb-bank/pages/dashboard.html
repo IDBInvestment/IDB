@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - IDB Banking</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/apple-touch-icon.png">
+    <link rel="manifest" href="../assets/images/site.webmanifest">
+    <link rel="stylesheet" href="../assets/css/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar Navigation -->
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <img src="../assets/images/logo.png" alt="IDB Logo" class="logo">
+            </div>
+            
+            <div class="sidebar-menu">
+                <a href="dashboard.html" class="menu-item active">
+                    <i class="fas fa-th-large"></i>
+                    <span>Overview</span>
+                </a>
+                <a href="portfolio.html" class="menu-item">
+                    <i class="fas fa-chart-pie"></i>
+                    <span>Portfolio</span>
+                </a>
+                <a href="transactions.html" class="menu-item">
+                    <i class="fas fa-exchange-alt"></i>
+                    <span>Transactions</span>
+                </a>
+                <a href="documents.html" class="menu-item">
+                    <i class="fas fa-file-alt"></i>
+                    <span>Documents</span>
+                </a>
+            </div>
+
+            <div class="sidebar-footer">
+                <a href="index.html" class="logout-btn">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Log Out</span>
+                </a>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="header">
+                <div class="header-content">
+                    <h1>Account Overview</h1>
+                    <div class="account-info">
+                        <div class="user-profile">
+                            <div class="avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <h2>Antoni B. Piotr</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-grid">
+                <!-- Balance Card -->
+                <div class="card balance-card">
+                    <div class="card-header">
+                        <h3><i class="fas fa-wallet"></i> Available Balance</h3>
+                    </div>
+                    <div class="card-content">
+                        <div class="balance-info">
+                            <div class="balance-amount">€4,246,000</div>
+                            <div class="balance-change positive">
+                                <i class="fas fa-arrow-up"></i>
+                                <span>+2.4% this month</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Account Details Card -->
+                <div class="card details-card">
+                    <div class="card-header">
+                        <h3><i class="fas fa-info-circle"></i> Account Details</h3>
+                    </div>
+                    <div class="card-content">
+                        <div class="detail-item">
+                            <span class="label"><i class="fas fa-university"></i> Bank Name:</span>
+                            <span class="value">Investment Development Bank (IDB)</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label"><i class="fas fa-map-marker-alt"></i> Address:</span>
+                            <span class="value">Al. Barciszewskiego Leona 133, Bydgoszcz, 85-791</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label"><i class="fas fa-phone"></i> Phone:</span>
+                            <span class="value">+48 78 919 97 13</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label"><i class="fas fa-globe"></i> Country:</span>
+                            <span class="value">Poland</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Transactions Card -->
+                <div class="card transactions-card">
+                    <div class="card-header">
+                        <h3><i class="fas fa-history"></i> Recent Transactions</h3>
+                        <a href="transactions.html" class="view-all">
+                            View All <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    <div class="card-content">
+                        <div class="transaction-list">
+                            <div class="transaction-item deposit">
+                                <div class="transaction-icon">
+                                    <i class="fas fa-arrow-down"></i>
+                                </div>
+                                <div class="transaction-info">
+                                    <div class="transaction-title">Investment Return</div>
+                                    <div class="transaction-meta">Real Estate Fund</div>
+                                </div>
+                                <div class="transaction-amount">+€245,000</div>
+                            </div>
+                            <div class="transaction-item withdrawal">
+                                <div class="transaction-icon">
+                                    <i class="fas fa-arrow-up"></i>
+                                </div>
+                                <div class="transaction-info">
+                                    <div class="transaction-title">Portfolio Investment</div>
+                                    <div class="transaction-meta">Tech Stocks</div>
+                                </div>
+                                <div class="transaction-amount">-€180,000</div>
+                            </div>
+                            <div class="transaction-item deposit">
+                                <div class="transaction-icon">
+                                    <i class="fas fa-arrow-down"></i>
+                                </div>
+                                <div class="transaction-info">
+                                    <div class="transaction-title">Dividend Payment</div>
+                                    <div class="transaction-meta">Blue Chip Stocks</div>
+                                </div>
+                                <div class="transaction-amount">+€125,000</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="../assets/js/dashboard.js"></script>
+</body>
+</html>

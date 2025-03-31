@@ -1,0 +1,314 @@
+/* Transactions Page Specific Styles */
+.filters-section {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border: 1px solid rgba(255, 215, 0, 0.1);
+    box-shadow: var(--card-shadow);
+}
+
+.filters-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.filter-group label {
+    color: var(--text-gray);
+    font-size: 0.9rem;
+}
+
+.filter-group select {
+    padding: 0.75rem;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 215, 0, 0.1);
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-light);
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    appearance: auto;
+    -webkit-appearance: menulist;
+    -moz-appearance: menulist;
+}
+
+.filter-group select:focus,
+.search-group input:focus {
+    outline: none;
+    border-color: var(--gold);
+    box-shadow: 0 0 0 2px rgba(255, 215, 0, 0.1);
+}
+
+.filter-group select option {
+    background: var(--primary-darker);
+    color: var(--text-light);
+    padding: 8px;
+}
+
+.search-group {
+    position: relative;
+}
+
+.search-group input {
+    width: 100%;
+    padding: 0.75rem;
+    padding-right: 2.5rem;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 215, 0, 0.1);
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-light);
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+.search-group i {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-gray);
+}
+
+/* Summary Cards */
+.summary-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.summary-card {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    border: 1px solid rgba(255, 215, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.summary-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--card-shadow);
+}
+
+.summary-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+
+.summary-card.incoming .summary-icon {
+    background: rgba(16, 185, 129, 0.1);
+    color: var(--success-color);
+}
+
+.summary-card.outgoing .summary-icon {
+    background: rgba(239, 68, 68, 0.1);
+    color: var(--danger-color);
+}
+
+.summary-details h3 {
+    font-size: 0.9rem;
+    color: var(--text-gray);
+    margin-bottom: 0.25rem;
+}
+
+.summary-details .amount {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--gold);
+}
+
+/* Transactions Table Styles */
+.transactions-table-container {
+    background: var(--card-bg);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 215, 0, 0.1);
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+    margin-bottom: 2rem;
+}
+
+.transactions-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.transactions-table th,
+.transactions-table td {
+    padding: 1rem;
+    text-align: left;
+}
+
+.transactions-table th {
+    background: rgba(255, 255, 255, 0.02);
+    color: var(--gold);
+    font-weight: 500;
+    white-space: nowrap;
+    cursor: pointer;
+    user-select: none;
+}
+
+.transactions-table th:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.transactions-table th i {
+    margin-left: 0.5rem;
+    font-size: 0.8rem;
+}
+
+.transactions-table tr {
+    border-bottom: 1px solid rgba(255, 215, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.transactions-table tr:hover {
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.transaction-type {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.transaction-type i {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+tr.deposit .transaction-type i {
+    background: rgba(16, 185, 129, 0.1);
+    color: var(--success-color);
+}
+
+tr.withdrawal .transaction-type i {
+    background: rgba(239, 68, 68, 0.1);
+    color: var(--danger-color);
+}
+
+tr.investment .transaction-type i {
+    background: rgba(255, 215, 0, 0.1);
+    color: var(--gold);
+}
+
+.amount {
+    font-weight: 600;
+}
+
+.amount.positive {
+    color: var(--success-color);
+}
+
+.amount.negative {
+    color: var(--danger-color);
+}
+
+.status {
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.status.completed {
+    background: rgba(16, 185, 129, 0.1);
+    color: var(--success-color);
+}
+
+.status.pending {
+    background: rgba(255, 215, 0, 0.1);
+    color: var(--gold);
+}
+
+.status.processing {
+    background: rgba(59, 130, 246, 0.1);
+    color: #3b82f6;
+}
+
+/* Pagination Styles */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.page-numbers {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.page-btn {
+    padding: 0.5rem 1rem;
+    border: 1px solid rgba(255, 215, 0, 0.1);
+    background: var(--card-bg);
+    color: var(--text-light);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.page-btn:hover:not(:disabled) {
+    background: rgba(255, 215, 0, 0.1);
+    color: var(--gold);
+}
+
+.page-btn.active {
+    background: var(--gold);
+    color: var(--primary-darker);
+    border-color: var(--gold);
+}
+
+.page-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.page-separator {
+    color: var(--text-gray);
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .filters-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .transactions-table-container {
+        overflow-x: auto;
+    }
+
+    .filters-container {
+        grid-template-columns: 1fr;
+    }
+
+    .header-content {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .pagination {
+        flex-wrap: wrap;
+    }
+}
